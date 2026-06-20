@@ -1,0 +1,25 @@
+# Competition data (large downloads)
+data/*.zip
+data/sdk/
+data/*.pdf
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Build artifacts
+submission/
+artifacts/
+*.tar.gz
+
+# Engine binaries (copied from competition SDK via download script)
+cg/*.dll
+cg/*.so
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store

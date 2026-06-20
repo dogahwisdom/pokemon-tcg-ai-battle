@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ptcg-ai-battle"
+version = "0.1.0"
+description = "Crustle-aware Lucario agent for the Kaggle PTCG AI Battle simulation"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Wisdom Dogah" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.9"]
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src/ptcg_battle"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src/ptcg_battle" = "ptcg_battle"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
